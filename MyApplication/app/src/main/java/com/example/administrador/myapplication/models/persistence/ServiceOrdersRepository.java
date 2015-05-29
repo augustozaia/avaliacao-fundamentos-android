@@ -61,4 +61,18 @@ public final class ServiceOrdersRepository {
         return serviceOrders;
     }
 
+    public List<ServiceOrder> getAllByFilter(boolean filter) {
+        DatabaseHelper helper = new DatabaseHelper(AppUtil.CONTEXT);
+        SQLiteDatabase db = helper.getReadableDatabase();
+
+        String where = ServiceOrderContract.ACTIVE + " = ?";
+        String[] args = {(filter) ? "1" : "0"};
+
+        Cursor cursor = db.query(ServiceOrderContract.TABLE, ServiceOrderContract.COLUNS, where, args, null, null, ServiceOrderContract.DATE);
+        List<ServiceOrder> serviceOrders = ServiceOrderContract.bindList(cursor);
+        db.close();
+        helper.close();
+        return serviceOrders;
+    }
+
 }

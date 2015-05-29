@@ -151,6 +151,18 @@ public class ServiceOrderListActivity extends AppCompatActivity implements Popup
                     startActivity(chooser);
                 }
                 return true;
+
+            case R.id.filterAll:
+                updateRecyclerItens();
+                break;
+
+            case R.id.filterActive:
+                updateRecyclerItensByActiveFilter(false);
+                break;
+
+            case R.id.filterDisable:
+                updateRecyclerItensByActiveFilter(true);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -161,5 +173,18 @@ public class ServiceOrderListActivity extends AppCompatActivity implements Popup
         final boolean menuShareVisible = mServiceOrdersAdapter.getItemCount() > 0;
         menuShare.setEnabled(menuShareVisible).setVisible(menuShareVisible);
         return super.onPrepareOptionsMenu(menu);
+    }
+
+    public void updateRecyclerItensByActiveFilter(boolean filter) {
+        final List<ServiceOrder> serviceOrders = ServiceOrder.getAllByFilter(filter);
+
+        if (mServiceOrdersAdapter == null) {
+            mServiceOrdersAdapter = new ServiceOrderListAdapter(serviceOrders);
+            mServiceOrders.setAdapter(mServiceOrdersAdapter);
+        } else {
+            mServiceOrdersAdapter.setItens(serviceOrders);
+            mServiceOrdersAdapter.notifyDataSetChanged();
+        }
+
     }
 }

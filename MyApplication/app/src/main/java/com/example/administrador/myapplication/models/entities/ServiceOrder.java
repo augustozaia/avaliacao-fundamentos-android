@@ -201,4 +201,7 @@ public class ServiceOrder implements Parcelable {
         ServiceOrdersRepository.getInstance().delete(this);
     }
 
+    public static List<ServiceOrder> getAllByFilter(boolean filter) {
+        return ServiceOrdersRepository.getInstance().getAllByFilter(filter);
+    }
 }

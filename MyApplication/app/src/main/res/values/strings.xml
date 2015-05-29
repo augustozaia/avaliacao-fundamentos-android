@@ -11,8 +11,8 @@
     <string name="msg_invalid_value">Invalid value.</string>
     <string name="msg_add_success">Service order added successfully.</string>
     <string name="msg_edit_success">Service order edited successfully.</string>
-    <string name="msg_descontinue">Descontinue the selected service order?</string>
-    <string name="msg_descontinue_success">Service order Descontinue successfully.</string>
+    <string name="msg_descontinue">Descontinue/Active the selected service order?</string>
+    <string name="msg_descontinue_success">Service order Descontinue/Active successfully.</string>
     <string name="msg_active">Active the selected service order?</string>
     <string name="msg_active_success">Service order Active successfully.</string>
 
@@ -33,7 +33,7 @@
     <string name="lbl_no">No</string>
     <string name="lbl_edit">Edit</string>
     <string name="lbl_active">Active</string>
-    <string name="lbl_descontinue">Descontinue</string>
+    <string name="lbl_descontinue">Descontinue/Active</string>
     <string name="lbl_options">Options</string>
     <string name="lbl_client_phone">Phone</string>
     <string name="lbl_call">Call</string>
@@ -41,5 +41,9 @@
     <string name="lbl_share">Share</string>
     <string name="lbl_share_option">Choose one option</string>
     <string name="lbl_invalid_user">User Invalid!</string>
+    <string name="menu_lbl_filter">Filter</string>
+    <string name="menu_item_lbl_all">All</string>
+    <string name="menu_item_lbl_active">Active</string>
+    <string name="menu_item_lbl_descontinue">Descontinue</string>
 
 </resources>
