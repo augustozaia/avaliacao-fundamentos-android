@@ -14,17 +14,17 @@
         android:title="@string/menu_lbl_filter"
         android:icon="@mipmap/ic_action_filter"
         app:showAsAction="always">
-
-            <item
-                android:id="@+id/filterAll"
-                android:title="@string/menu_item_lbl_all" />
-            <item
-                android:id="@+id/filterActive"
-                android:title="@string/menu_item_lbl_active" />
-            <item
-                android:id="@+id/filterDisable"
-                android:title="@string/menu_item_lbl_descontinue" />
-
+            <menu>
+                <item
+                    android:id="@+id/filterAll"
+                    android:title="@string/menu_item_lbl_all" />
+                <item
+                    android:id="@+id/filterActive"
+                    android:title="@string/menu_item_lbl_active" />
+                <item
+                    android:id="@+id/filterDisable"
+                    android:title="@string/menu_item_lbl_descontinue" />
+            </menu>
     </item>
 
 </menu>
